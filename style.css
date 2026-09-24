@@ -1,0 +1,641 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #090909;
+    color: white;
+    line-height: 1.6;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* NAVBAR */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 7%;
+
+    background: rgba(0, 0, 0, 0.9);
+
+    z-index: 1000;
+}
+
+
+.logo {
+    font-family: 'Anton', sans-serif;
+
+    font-size: 30px;
+
+    letter-spacing: 2px;
+}
+
+
+.logo span {
+    color: #e6392f;
+}
+
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+
+nav a {
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+    color: #e6392f;
+}
+
+
+.menu {
+    display: none;
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+
+    padding: 130px 7% 70px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 50px;
+
+    background:
+        radial-gradient(
+            circle at right,
+            #42110e,
+            #090909 50%
+        );
+}
+
+
+.small-title {
+    color: #e6392f;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+
+.hero h1 {
+    font-family: 'Anton', sans-serif;
+
+    font-size: clamp(60px, 9vw, 110px);
+
+    line-height: 1;
+
+    letter-spacing: 2px;
+}
+
+
+.hero h1 span {
+    display: block;
+
+    color: #e6392f;
+}
+
+
+.hero-text > p:not(.small-title) {
+    color: #bbb;
+
+    font-size: 18px;
+
+    max-width: 550px;
+
+    margin: 25px 0;
+}
+
+
+.hero-image img {
+    width: 100%;
+
+    display: block;
+
+    border-radius: 5px;
+
+    box-shadow: 0 30px 70px rgba(0,0,0,0.7);
+}
+
+
+/* BUTTONS */
+
+.buttons {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+.btn {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    background: #e6392f;
+
+    color: white;
+
+    border: 2px solid #e6392f;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.btn:hover {
+    background: #ff5147;
+
+    transform: translateY(-3px);
+}
+
+
+.second {
+    background: transparent;
+}
+
+
+.second:hover {
+    background: #e6392f;
+}
+
+
+/* STATS */
+
+.stats {
+    background: #e6392f;
+
+    padding: 30px 7%;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    text-align: center;
+
+    gap: 20px;
+}
+
+
+.stats h2 {
+    font-family: 'Anton', sans-serif;
+
+    font-size: 35px;
+}
+
+
+.stats p {
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* ABOUT */
+
+.about {
+    padding: 110px 7%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+}
+
+
+.about h2,
+.programs h2,
+.trainers h2,
+.contact h2 {
+    font-family: 'Anton', sans-serif;
+
+    font-size: clamp(45px, 6vw, 75px);
+
+    line-height: 1.05;
+}
+
+
+.about h2 span,
+.contact h2 span {
+    color: #e6392f;
+
+    display: block;
+}
+
+
+.about-text {
+    color: #aaa;
+
+    font-size: 17px;
+}
+
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+
+/* PROGRAMS */
+
+.programs {
+    padding: 100px 7%;
+
+    background: #101010;
+}
+
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 40px;
+}
+
+
+.card {
+    background: #181818;
+
+    border: 1px solid #292929;
+}
+
+
+.card img {
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+}
+
+
+.card-content {
+    padding: 25px;
+}
+
+
+.card h3 {
+    font-size: 23px;
+
+    margin-bottom: 10px;
+}
+
+
+.card p {
+    color: #999;
+
+    margin-bottom: 15px;
+}
+
+
+.card a {
+    color: #e6392f;
+
+    font-weight: 800;
+}
+
+
+/* TRAINERS */
+
+.trainers {
+    padding: 100px 7%;
+}
+
+
+.trainer-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 40px;
+}
+
+
+.trainer {
+    background: #161616;
+
+    padding-bottom: 20px;
+}
+
+
+.trainer img {
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: cover;
+}
+
+
+.trainer h3 {
+    font-size: 22px;
+
+    margin: 15px 20px 0;
+}
+
+
+.trainer p {
+    color: #999;
+
+    margin-left: 20px;
+}
+
+
+/* CTA */
+
+.cta {
+    padding: 110px 7%;
+
+    background: #e6392f;
+
+    text-align: center;
+}
+
+
+.cta p {
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+
+.cta h2 {
+    font-family: 'Anton', sans-serif;
+
+    font-size: clamp(45px, 7vw, 80px);
+
+    line-height: 1;
+
+    margin: 20px 0 35px;
+}
+
+
+.cta .btn {
+    background: white;
+
+    color: #111;
+
+    border-color: white;
+}
+
+
+.cta .btn:hover {
+    background: #111;
+
+    color: white;
+}
+
+
+/* CONTACT */
+
+.contact {
+    padding: 100px 7%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+}
+
+
+.contact-info > p:not(.small-title) {
+    color: #aaa;
+
+    margin-bottom: 15px;
+}
+
+
+form {
+    display: grid;
+
+    gap: 15px;
+}
+
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 16px;
+
+    background: #161616;
+
+    color: white;
+
+    border: 1px solid #333;
+
+    font-family: inherit;
+
+    font-size: 15px;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #e6392f;
+
+    border-color: transparent;
+}
+
+
+form button {
+    font-family: inherit;
+}
+
+
+#formMessage {
+    color: #54e39a;
+
+    font-weight: 700;
+}
+
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #292929;
+
+    padding: 35px 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: #777;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 18px 5%;
+    }
+
+
+    .menu {
+        display: block;
+    }
+
+
+    nav {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        background: #0b0b0b;
+
+        padding: 25px 5%;
+
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+
+    nav.active {
+        display: flex;
+    }
+
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        padding: 120px 5% 60px;
+
+        text-align: center;
+    }
+
+
+    .hero-image {
+        order: -1;
+    }
+
+
+    .hero-text > p:not(.small-title) {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .buttons {
+        justify-content: center;
+    }
+
+
+    .stats {
+        grid-template-columns: 1fr 1fr;
+
+        padding: 30px 5%;
+    }
+
+
+    .about,
+    .contact {
+        grid-template-columns: 1fr;
+
+        padding: 75px 5%;
+    }
+
+
+    .programs,
+    .trainers {
+        padding: 75px 5%;
+    }
+
+
+    .cards,
+    .trainer-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .trainer img {
+        height: 400px;
+    }
+
+
+    footer {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+
+}
